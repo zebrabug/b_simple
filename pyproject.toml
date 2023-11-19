@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "b-simple"
+version = "0.1.0"
+description = "super algo"
+authors = ["me"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.10.13"
+jupyter = "^1.0.0"
+jupyterlab = "^4.0.8"
+pandas = "^2.1.2"
+websockets = "^12.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
