@@ -32,7 +32,9 @@ class Strategy:
                     )
                 elif event["event_type"] == "aggTrade":
                     logging.info(
-                        f"trades {event['event_time']} {event['exchange_time']} {event['instrument']} {event['data']['price']} {event['data']['quantity']}"
+                        f"trades {event['event_time']} {event['exchange_time']} "
+                        + f"{event['instrument']} {event['data']['price']} {event['data']['quantity']} "
+                        + f"{1 if event['data']['is_buy'] else 0}"
                     )
                 else:
                     None

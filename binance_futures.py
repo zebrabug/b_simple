@@ -43,7 +43,11 @@ class BinanceFuturesMarket:
                         "event_type": self._ws_type,
                         "exchange_time": d["data"]["E"],
                         "event_time": event_time,
-                        "data": {"price": d["data"]["p"], "quantity": d["data"]["q"]},
+                        "data": {
+                            "price": d["data"]["p"],
+                            "quantity": d["data"]["q"],
+                            "is_buy": d["data"]["m"],
+                        },
                     }
                 else:
                     None
